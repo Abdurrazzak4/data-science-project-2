@@ -1,23 +1,23 @@
 import psycopg2
 
 ## Bu değeri localinde çalışırken kendi passwordün yap. Ama kodu pushlarken 'postgres' olarak bırak.
-password = 'postgres'
+password = 'Vanlee3565.'
 
 
 def connect_db():
     conn = psycopg2.connect(
     host="localhost",
     port=5432,
-    database="postgres",
+    database="çalışma2",
     user="postgres",
-    password=password)
+    password='Vanlee3565.')
     return conn
 
 
 def question_1_query():
     connection = connect_db()
     cursor = connection.cursor()
-    cursor.execute('')
+    cursor.execute('select * from students where age > 22')
     data = cursor.fetchall()
     cursor.close()
     connection.close()
