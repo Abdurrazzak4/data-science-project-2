@@ -27,7 +27,7 @@ def question_1_query():
 def question_2_query():
     connection = connect_db()
     cursor = connection.cursor()
-    cursor.execute('')
+    cursor.execute('select * from courses where category = \'Veritabanı\'')
     data = cursor.fetchall()
     cursor.close()
     connection.close()
@@ -37,7 +37,7 @@ def question_2_query():
 def question_3_query():
     connection = connect_db()
     cursor = connection.cursor()
-    cursor.execute('')
+    cursor.execute('select * from students where first_name ilike \'a%\'')
     data = cursor.fetchall()
     cursor.close()
     connection.close()
@@ -47,7 +47,7 @@ def question_3_query():
 def question_4_query():
     connection = connect_db()
     cursor = connection.cursor()
-    cursor.execute('')
+    cursor.execute('select * from courses where course_name ilike \'%SQL%\'')
     data = cursor.fetchall()
     cursor.close()
     connection.close()
@@ -57,7 +57,7 @@ def question_4_query():
 def question_5_query():
     connection = connect_db()
     cursor = connection.cursor()
-    cursor.execute('')
+    cursor.execute('select * from students where age between 22 and 24')
     data = cursor.fetchall()
     cursor.close()
     connection.close()
